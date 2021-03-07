@@ -42,20 +42,50 @@
 
   var availableHeroes = []
   var availableBoards = []
+  var players = 2
+  var selectedBoard = ""
+  var selectedPlayer = ["N/A", "N/A", "N/A", "N/A"]
 
   /////// Functions
   
   function submit () {
+    availableHeroes = []
+    availableBoards = []
+    playerCount()
     isChecked()
     setData.forEach (set => createArrays(set))
-    if (availableBoards.length === 0) {
-      alert("Bruce Lee expansion is not playable on its own")
+    if (availableBoards.length === 0 || availableHeroes.length < players) {
+      alert("The expansions you have selected don't have enough content to support the number of players you have selected")
+      document.location.reload()
     } else {
-      console.log(" heroes " + availableHeroes)
-      console.log(" boards " + availableBoards)
+      selectBoard()
+      selectHeroes()
     }
+    display("displayPlayer1", "Hero 1: ", 0)
+    display("displayPlayer2", "Hero 2: ", 1)
+    display("displayPlayer3", "Hero 3: ", 2)
+    display("displayPlayer4", "Hero 4: ", 3)
+    display("displayBoard", "Selected board: ", 0)
+    console.log("Selected board: " + selectedBoard)
+    console.log("Hero 1: " + selectedPlayer[0])
+    console.log("Hero 2: " + selectedPlayer[1])
+    console.log("Hero 3: " + selectedPlayer[2])
+    console.log("Hero 4: " + selectedPlayer[3])
   }
   
+  function display(htmlId, string, player) {
+    if (string == "Selected board: ") {
+      let x = document.getElementById(htmlId)
+      x.innerHTML = string + selectedBoard
+    }  else if (selectedPlayer[player] != "N/A") {
+      let x = document.getElementById(htmlId)
+      x.innerHTML = string + selectedPlayer[player]
+    }
+    
+  }  
+
+  
+
   function isChecked() {
     setData[0].inUse = document.getElementById("volOne").checked
     setData[1].inUse = document.getElementById("bruceLee").checked
@@ -76,5 +106,30 @@
       }
     }
   }
-    
 
+  function playerCount() {
+    if (document.getElementById('twoPlayers').checked) {
+      players = 2
+    } else if (document.getElementById('threePlayers').checked) {
+      players = 3
+    } else {
+      players = 4
+    }
+  console.log("players " + players)
+  }
+  
+  function randomRange(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin +1)) + myMin;
+  }
+
+  function selectBoard() {
+    selectedBoard = availableBoards[randomRange(0, (availableBoards.length - 1))]
+  }
+
+  function selectHeroes() {
+    for (i = 0; i < players; i++) {
+      x = randomRange(0, (availableHeroes.length - 1))
+      selectedPlayer[i] = availableHeroes[x]
+      availableHeroes.splice(x,1) //Removes selected hero from available pool to avoid duplication
+    }
+  }
