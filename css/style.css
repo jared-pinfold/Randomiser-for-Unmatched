@@ -24,17 +24,14 @@ width: 1.5em;
   background: grey;
 }
 
-.leftHeaderContent {
-  text-align: left;
-  margin-left: 1em;
-  justify-content: left;
+.headerContent {
+  width: 500px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.rightHeaderContent {
-  text-align: right;
-  margin-right: 1em;
-  justify-content: right;
-}
 
 .card-left {
   width: 500px;

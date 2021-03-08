@@ -88,7 +88,6 @@
       let x = document.getElementById(htmlId)
       x.innerHTML = ""
     }
-    console.log(selectedPlayer)
   }  
 
   
@@ -118,7 +117,6 @@
         }
       }
     }
-    console.log("createArrays: " + availableBoards)
   }
 
   function playerCount() {
@@ -129,7 +127,6 @@
     } else {
       players = 4
     }
-  console.log("players " + players)
   }
   
   function randomRange(myMin, myMax) {
