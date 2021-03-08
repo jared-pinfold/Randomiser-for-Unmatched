@@ -44,7 +44,7 @@
     inUse: false,
     heroes: ["Beowulf", "Little Red Riding Hood"],
     boards2: ["Heorot"],
-    boards4: ["Heorot"]
+    boards4: []
   }]
 
   var availableHeroes = []
