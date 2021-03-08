@@ -7,37 +7,44 @@
   var setData = [{
     inUse: false,
     heroes: ["King Arthur", "Alice", "Medusa", "Sinbad"],
-    boards: ["Sarpedon", "Marmoreal"]
+    boards2: ["Sarpedon", "Marmoreal"],
+    boards4: ["Sarpedon", "Marmoreal"]
   },
   {
     inUse: false,
     heroes: ["Bruce Lee"],
-    boards: []
+    boards2: [],
+    boards4: []
   },
   {
     inUse: false,
     heroes: ["Robin Hood", "Bigfoot"],
-    boards: ["Sherwood Forest", "Yukon"]
+    boards2: ["Sherwood Forest", "Yukon"],
+    boards4: []
   },
   {
     inUse: false,
     heroes: ["Muldoon", "Raptors"],
-    boards: ["Raptor Paddock"]
+    boards2: ["Raptor Paddock"],
+    boards4: []
   },
  {
     inUse: false,
     heroes: ["Buffy", "Spike", "Willow", "Angel"],
-    boards: ["The Bronze", "Sunnydale High"]
+    boards2: ["The Bronze", "Sunnydale High"],
+    boards4: ["The Bronze", "Sunnydale High"]
   },
  {
     inUse: false,
     heroes: ["Dracula", "The Invisible Man", "Sherlock Holmes", "Jekyll & Hyde"],
-    boards: ["Soho", "Baskerville Manor"]
+    boards2: ["Soho", "Baskerville Manor"],
+    boards4: ["Soho", "Baskerville Manor"]
   },
   {
     inUse: false,
     heroes: ["Beowulf", "Little Red Riding Hood"],
-    boards: ["Heorot"]
+    boards2: ["Heorot"],
+    boards4: ["Heorot"]
   }]
 
   var availableHeroes = []
@@ -106,10 +113,17 @@
       for (i = 0; i < set["heroes"].length; i++) {
        availableHeroes.push(set["heroes"][i])
       }
-      for (i = 0; i < set["boards"].length; i++) {
-        availableBoards.push(set["boards"][i])
+      if (players == 2) {
+        for (i = 0; i < set["boards2"].length; i++) {
+          availableBoards.push(set["boards2"][i])
+        }
+      } else {
+        for (i = 0; i < set["boards4"].length; i++) {
+          availableBoards.push(set["boards4"][i])
+        }
       }
     }
+    console.log("createArrays: " + availableBoards)
   }
 
   function playerCount() {
