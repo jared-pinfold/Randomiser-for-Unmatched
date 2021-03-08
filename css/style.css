@@ -1,0 +1,60 @@
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: xx-large;
+}
+
+button {
+  height: 50px;
+  width: 100px;
+  border-radius: 7px;
+  margin-top: 15px;
+}
+
+input.lg-checkbox {
+height: 1.5em;
+width: 1.5em;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+.header {
+  background: grey;
+}
+
+.leftHeaderContent {
+  text-align: left;
+  margin-left: 1em;
+  justify-content: left;
+}
+
+.rightHeaderContent {
+  text-align: right;
+  margin-right: 1em;
+  justify-content: right;
+}
+
+.card-left {
+  width: 500px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.card-right {
+  width: 500px;
+  margin: 15px;
+  padding: 15px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.disclaimer {
+  font-size: medium;
+  text-align: center;
+}

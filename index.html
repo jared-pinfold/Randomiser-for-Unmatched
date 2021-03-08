@@ -2,92 +2,99 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Unmatched character randomiser</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <title>Unmatched character randomiser</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <script src="js/randomiser.js"></script>
 
-    <!--TO DO LIST
-        
-        tickboxes for each set
-
-    button - generate 2 player match
-    button - generate 3 player match
-    button - generate 4 player match
-
-    Output 2 x 2 grid with character portraits and names - 3 and 4 may be blank
-    Output board -->
-
-
-    <!-- *********** Header Section -->
-  <div>
+   <!-- *********** Header Section -->
+  <div class="card-container header">
+    <div class="card-left">
+      <h3>Unmatched character randomiser</h3>
+    </div>
+    <div class="card-right">
+      <h3>By Jared Pinfold</h3>
+    </div>
   </div>
 
-    <!-- Radio buttons to select player count -->
-  <p>
-    Select number of players:
-  </p>
-  <input type="radio" id="twoPlayers" name="playerCount" value=2 checked>
-  <label for="twoPlayers">2</label><br>
-  <input type="radio" id="threePlayers" name="playerCount" value="3">
-  <label for="threePlayers">3</label><br>
-  <input type="radio" id="fourPlayers" name="playerCount" value="4">
-  <label for="fourPlayers">4</label>
+  <!-- Radio buttons to select player count -->
+  <div class="card-container">
+    <div class="card-left">
+      <h3>
+        Select number of players:
+      </h3>
+      <input type="radio" id="twoPlayers" name="playerCount" class="lg-checkbox" value=2 checked>
+      <label for="twoPlayers">2 Players</label><br>
+      <input type="radio" id="threePlayers" name="playerCount" class="lg-checkbox" value="3">
+      <label for="threePlayers">3 Players</label><br>
+      <input type="radio" id="fourPlayers" name="playerCount" class="lg-checkbox" value="4">
+      <label for="fourPlayers">4 Players</label>
 
-    <!-- *********** Tickboxes -->
-    <p>
+      <!-- *********** Tickboxes -->
+      <h3>
         Select all sets you have access to:
-    </p>
-    <div>
-        <input type="checkbox" id="volOne" name="volOne">
+      </h3>
+      <div>
+        <input type="checkbox" id="volOne" name="volOne" class="lg-checkbox">
         <label for="volOne">Battle of Legends, Vol One</label>
-    </div>
-    <div>
-        <input type="checkbox" id="bruceLee" name="bruceLee">
+      </div>
+      <div>
+        <input type="checkbox" id="bruceLee" name="bruceLee" class="lg-checkbox">
         <label for="bruceLee">Bruce Lee</label>
-    </div>
-    <div>
-        <input type="checkbox" id="robinHood" name="robinHood">
+      </div>
+      <div>
+        <input type="checkbox" id="robinHood" name="robinHood" class="lg-checkbox">
         <label for="robinHood">Robin Hood vs. Bigfoot</label>
-    </div>
-    <div>
-        <input type="checkbox" id="raptors" name="raptors">
+      </div>
+      <div>
+        <input type="checkbox" id="raptors" name="raptors" class="lg-checkbox">
         <label for="raptors">Jurassic Park: InGen vs. Raptors</label>
-    </div>
-    <div>
-        <input type="checkbox" id="buffy" name="buffy">
+      </div>
+      <div>
+        <input type="checkbox" id="buffy" name="buffy" class="lg-checkbox">
         <label for="buffy">Buffy the Vampire Slayer</label>
-    </div>
-    <div>
-        <input type="checkbox" id="cobbleAndFog" name="cobbleAndFog">
+      </div>
+      <div>
+        <input type="checkbox" id="cobbleAndFog" name="cobbleAndFog" class="lg-checkbox">
         <label for="cobbleAndFog">Cobble & Fog</label>
-    </div>
-    <div>
-        <input type="checkbox" id="beowulf" name="beowulf">
+      </div>
+      <div>
+        <input type="checkbox" id="beowulf" name="beowulf" class="lg-checkbox">
         <label for="beowulf">Little Red Riding Hood vs. Beowulf</label>
-    </div>
-    <div>
+      </div>
+      <div>
         <button onclick="submit()">Submit</button>
+      </div>
     </div>
+
     <!-- ********** Output -->
+    <div class="card-right">
+      <h3>Board:</h3>
+      <div id="displayBoard">
+      </div>
+      <h3>Heroes:</h3>
+      <div id="displayPlayer1">
+      </div>
+      <div id="displayPlayer2">
+      </div>
+      <div id="displayPlayer3">
+      </div>
+      <div id="displayPlayer4">
+      </div>
+    </div>
+  </div>
+
+  <p class="disclaimer">
+    This site is not in any way affiliated with Restoration Games or Mondo Games. Unmatched is a trademark of Restoration Games, LLC and is used without permission. 
+  </p>
 
 </body>
 
 
-<div id="displayBoard">
-  Board: x
-</div>
-<div id="displayPlayer1">
-  Player One: x
-</div>
-<div id="displayPlayer2">
-  Player Two: x
-</div>
-<div id="displayPlayer3">
-</div>
-<div id="displayPlayer4">
-</div>
+
 </html>

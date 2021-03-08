@@ -70,22 +70,17 @@
       selectBoard()
       selectHeroes()
     }
-    display("displayPlayer1", "Hero 1: ", 0)
-    display("displayPlayer2", "Hero 2: ", 1)
-    display("displayPlayer3", "Hero 3: ", 2)
-    display("displayPlayer4", "Hero 4: ", 3)
+    display("displayPlayer1", "Player 1: ", 0)
+    display("displayPlayer2", "Player 2: ", 1)
+    display("displayPlayer3", "Player 3: ", 2)
+    display("displayPlayer4", "Player 4: ", 3)
     display("displayBoard", "Selected board: ", 0)
-    console.log("Selected board: " + selectedBoard)
-    console.log("Hero 1: " + selectedPlayer[0])
-    console.log("Hero 2: " + selectedPlayer[1])
-    console.log("Hero 3: " + selectedPlayer[2])
-    console.log("Hero 4: " + selectedPlayer[3])
   }
   
   function display(htmlId, string, player) {
     if (string == "Selected board: ") {
       let x = document.getElementById(htmlId)
-      x.innerHTML = string + selectedBoard
+      x.innerHTML = selectedBoard
     }  else if (selectedPlayer[player] != "N/A") {
       let x = document.getElementById(htmlId)
       x.innerHTML = string + selectedPlayer[player]
