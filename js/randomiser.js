@@ -51,6 +51,8 @@
   function submit () {
     availableHeroes = []
     availableBoards = []
+    players = 2
+    selectedPlayer = ["N/A", "N/A", "N/A", "N/A"]
     playerCount()
     isChecked()
     setData.forEach (set => createArrays(set))
@@ -80,8 +82,11 @@
     }  else if (selectedPlayer[player] != "N/A") {
       let x = document.getElementById(htmlId)
       x.innerHTML = string + selectedPlayer[player]
+    } else if (selectedPlayer[player] == "N/A") {
+      let x = document.getElementById(htmlId)
+      x.innerHTML = ""
     }
-    
+    console.log(selectedPlayer)
   }  
 
   
