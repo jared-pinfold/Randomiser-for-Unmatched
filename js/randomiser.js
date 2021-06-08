@@ -45,6 +45,12 @@
     heroes: ["Beowulf", "Little Red Riding Hood"],
     boards2: ["Heorot"],
     boards4: []
+  },
+  {
+    inUse: false,
+    heroes: ["Deadpool"],
+    boards2: [],
+    boards4: []
   }]
 
   var availableHeroes = []
@@ -100,6 +106,7 @@
     setData[4].inUse = document.getElementById("buffy").checked
     setData[5].inUse = document.getElementById("cobbleAndFog").checked
     setData[6].inUse = document.getElementById("beowulf").checked
+    setData[7].inUse = document.getElementById("deadpool").checked
   }
 
   function createArrays (set) {
