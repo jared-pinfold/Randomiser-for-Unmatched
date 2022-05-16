@@ -51,6 +51,30 @@
     heroes: ["Deadpool"],
     boards2: [],
     boards4: []
+  },
+  {
+    inUse: false,
+    heroes: ["Yennenga", "Achilles", "Sun Wukong", "Bloody Mary"],
+    boards2: ["Hanging Gardens"],
+    boards4: ["Hanging Gardens"]
+  },
+  {
+    inUse: false,
+    heroes: ["Daredevil", "Elektra", "Bullseye"],
+    boards2: ["Hell's Kitchen"],
+    boards4: ["Hell's Kitchen"]
+  },
+  {
+    inUse: false,
+    heroes: ["Luke Cage", "Ghost Rider", "Moon Knight"],
+    boards2: ["The Raft"],
+    boards4: ["The Raft"]
+  },
+  {
+    inUse: false,
+    heroes: ["Dr. Sattler", "T. Rex"],
+    boards2: ["Jurassic Park"],
+    boards4: []
   }]
 
   var availableHeroes = []
@@ -107,6 +131,10 @@
     setData[5].inUse = document.getElementById("cobbleAndFog").checked
     setData[6].inUse = document.getElementById("beowulf").checked
     setData[7].inUse = document.getElementById("deadpool").checked
+    setData[8].inUse = document.getElementById("volTwo").checked
+    setData[9].inUse = document.getElementById("hellsKitchen").checked
+    setData[10].inUse = document.getElementById("redemptionRow").checked
+    setData[11].inUse = document.getElementById("tRex").checked
   }
 
   function createArrays (set) {
