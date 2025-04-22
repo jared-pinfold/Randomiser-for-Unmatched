@@ -3,6 +3,7 @@
 /////////////////////////////////////////////
 
 /// Declare global variables
+//TODO: update set data to be current
 
   var setData = [{
     inUse: false,
